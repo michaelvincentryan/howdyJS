@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="shortcut icon" href="../media/favicon.png">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>Howdy</title>
+</head>
+<body>
+    <navbar>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/"><img src="../media/wave_emoji.png" alt="Howdy!"/></a>
+            <a class="navbar-item" href="/messages">Messages</a>
+            <a class="navbar-item" href="/patients">Patients</a>
+            <a class="navbar-item" href="/users">Users</a>
+            <a class="navbar-item" href="">Settings</a>
+        </div>
+    </navbar>
+    <div class="columns">
+        <div class="column is-one-fifth">
+            <aside class="menu">
+                <p class="menu-label">
+                    General
+                </p>
+                <ul class="menu-list">
+                    <li><a class="is-active">Dashboard</a></li>
+                    <li><a>Patients</a></li>
+                    <li><a>Messages</a></li>
+                    <li><a>Appointments</a></li>
+                </ul>
+                <p class="menu-label">
+                    Settings
+                </p>
+                 <ul class="menu-list">
+                    <li><a>General Settings</a></li>
+                    <li><a>Template Settings</a></li>
+                    <li><a>User Settings</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class="column">
+            {% block main %}
+            <p> Let's get started</p>
+            {% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>

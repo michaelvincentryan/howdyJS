@@ -1,0 +1,30 @@
+﻿{% extends 'base.html' %}
+
+{% block main %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Patient</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for patient in patients %}
+        <tr>
+            <td>{{ patient.id }}</td>
+            <td>{{ patient.first_name }} {{ patient.last_name }}</td>
+            <td></td>
+        </tr>
+        {%else%}
+        <tr>
+            <td>ID</td>
+            <td>TEXT</td>
+            <td>STATUS</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
